@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
       icon: MessageCircle,
       title: { en: 'WhatsApp' },
       value: '+212 600 000 000',
-      link: 'https://wa.me/212600000000',
+      link: 'https://wa.me/212698570282',
       description: { en: 'Fastest way to reach us' }
     },
     {
@@ -179,7 +179,7 @@ const Contact: React.FC = () => {
             Contact us directly via WhatsApp
           </p>
           <a
-            href="https://wa.me/212600000000"
+            href="https://wa.me/212698570282"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg transition-colors font-semibold text-lg shadow-lg hover:shadow-xl"

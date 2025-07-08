@@ -52,14 +52,14 @@ const Home: React.FC = () => {
               "logo": "https://safar.moussabfatmi.me/assets/og-image.jpg",
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+212600000000",
+                "telephone": "+212698570282",
                 "contactType": "customer service",
                 "areaServed": "MA",
                 "availableLanguage": ["English", "French", "Arabic"]
               },
               "sameAs": [
-                "https://www.facebook.com/yourpage",
-                "https://www.instagram.com/yourpage"
+                "https://www.facebook.com/moussabfatmi",
+                "https://www.instagram.com/moussabfatmi"
               ]
             }
           `}

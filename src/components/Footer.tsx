@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
               <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="https://wa.me/212600000000" className="text-gray-400 hover:text-orange-500 transition-colors">
+              <a href="https://wa.me/212698570282" className="text-gray-400 hover:text-orange-500 transition-colors">
                 <MessageCircle className="w-6 h-6" />
               </a>
             </div>
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
-              <a href="https://wa.me/212600000000" className="flex items-center space-x-2 text-gray-400 hover:text-orange-500 transition-colors">
+              <a href="https://wa.me/212698570282" className="flex items-center space-x-2 text-gray-400 hover:text-orange-500 transition-colors">
                 <MessageCircle className="w-5 h-5" />
                 <span>+212 600 000 000</span>
               </a>

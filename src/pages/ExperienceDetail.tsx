@@ -133,13 +133,28 @@ const ExperienceDetail: React.FC = () => {
                 <DollarSign className="w-8 h-8 text-orange-600" />
               </div>
             </div>
-            <button
-              onClick={handleWhatsAppClick}
-              className="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white py-4 rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 font-semibold text-lg flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
-            >
-              <MessageCircle className="w-6 h-6" />
-              <span>Book via WhatsApp</span>
-            </button>
+            {/* Booking and PDF Buttons */}
+            <div className="flex flex-col md:flex-row gap-4 mt-4">
+              <button
+                onClick={handleWhatsAppClick}
+                className="flex-1 bg-gradient-to-r from-orange-500 to-red-600 text-white py-4 rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 font-semibold text-lg flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
+              >
+                <MessageCircle className="w-6 h-6" />
+                <span>Book via WhatsApp</span>
+              </button>
+              <a
+                href={experience.pdfUrl || undefined}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex-1 py-4 rounded-lg text-lg font-semibold flex items-center justify-center space-x-2 shadow-lg transition-all duration-300
+                  ${experience.pdfUrl ? 'bg-blue-600 text-white hover:bg-blue-700 cursor-pointer' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
+                tabIndex={experience.pdfUrl ? 0 : -1}
+                aria-disabled={!experience.pdfUrl}
+                onClick={e => { if (!experience.pdfUrl) e.preventDefault(); }}
+              >
+                <span>View Program (PDF)</span>
+              </a>
+            </div>
             <p className="text-sm text-gray-500 text-center mt-4">
               You will be redirected to WhatsApp to contact the guide
             </p>

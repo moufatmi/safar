@@ -58,10 +58,10 @@ const Contact: React.FC = () => {
                   <method.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2">
-                  {method.title[currentLanguage.code]}
+                  {method.title.en}
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  {method.description[currentLanguage.code]}
+                  {method.description.en}
                 </p>
                 {method.link ? (
                   <a

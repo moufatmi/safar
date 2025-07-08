@@ -42,6 +42,28 @@ const Home: React.FC = () => {
         <meta property="og:image" content="https://safar.moussabfatmi.me/assets/og-image.jpg" />
         <meta property="og:url" content="https://safar.moussabfatmi.me/" />
         <link rel="canonical" href="https://safar.moussabfatmi.me/" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Morocco Plug",
+              "url": "https://safar.moussabfatmi.me",
+              "logo": "https://safar.moussabfatmi.me/assets/og-image.jpg",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+212600000000",
+                "contactType": "customer service",
+                "areaServed": "MA",
+                "availableLanguage": ["English", "French", "Arabic"]
+              },
+              "sameAs": [
+                "https://www.facebook.com/yourpage",
+                "https://www.instagram.com/yourpage"
+              ]
+            }
+          `}
+        </script>
       </Helmet>
       <Hero />
       

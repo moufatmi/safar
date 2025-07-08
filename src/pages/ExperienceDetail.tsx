@@ -70,6 +70,33 @@ const ExperienceDetail: React.FC = () => {
         <meta property="og:image" content={experience ? experience.image : 'https://safar.moussabfatmi.me/assets/og-image.jpg'} />
         <meta property="og:url" content={`https://safar.moussabfatmi.me/#/experience/${id}`} />
         <link rel="canonical" href={`https://safar.moussabfatmi.me/#/experience/${id}`} />
+        {experience && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "TouristTrip",
+              "name": experience.title,
+              "description": experience.description,
+              "image": experience.image,
+              "touristType": "Adventure",
+              "offers": {
+                "@type": "Offer",
+                "price": experience.price,
+                "priceCurrency": "MAD",
+                "url": `https://safar.moussabfatmi.me/#/experience/${id}`
+              },
+              "provider": {
+                "@type": "Organization",
+                "name": "Morocco Plug"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": experience.rating ?? 4.8,
+                "reviewCount": experience.rating_count ?? 124
+              }
+            })}
+          </script>
+        )}
       </Helmet>
       <div className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">

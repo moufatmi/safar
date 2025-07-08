@@ -63,10 +63,10 @@ const ExperienceDetail: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>{experience ? `${experience.title} | Morocco Plug` : 'Experience Details | Morocco Plug'}</title>
-        <meta name="description" content={experience ? experience.description : 'Discover this experience in Morocco with Morocco Plug.'} />
-        <meta property="og:title" content={experience ? `${experience.title} | Morocco Plug` : 'Experience Details | Morocco Plug'} />
-        <meta property="og:description" content={experience ? experience.description : 'Discover this experience in Morocco with Morocco Plug.'} />
+        <title>{experience ? `${experience.title} | Mariem Travels` : 'Experience Details | Mariem Travels'}</title>
+        <meta name="description" content={experience ? experience.description : 'Discover this experience in Morocco with Mariem Travels.'} />
+        <meta property="og:title" content={experience ? `${experience.title} | Mariem Travels` : 'Experience Details | Mariem Travels'} />
+        <meta property="og:description" content={experience ? experience.description : 'Discover this experience in Morocco with Mariem Travels.'} />
         <meta property="og:image" content={experience ? experience.image : 'https://safar.moussabfatmi.me/assets/og-image.jpg'} />
         <meta property="og:url" content={`https://safar.moussabfatmi.me/#/experience/${id}`} />
         <link rel="canonical" href={`https://safar.moussabfatmi.me/#/experience/${id}`} />
@@ -87,7 +87,7 @@ const ExperienceDetail: React.FC = () => {
               },
               "provider": {
                 "@type": "Organization",
-                "name": "Morocco Plug"
+                "name": "Mariem Travels"
               },
               "aggregateRating": {
                 "@type": "AggregateRating",

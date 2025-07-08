@@ -51,9 +51,9 @@ const Experiences: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Experiences in Morocco | Morocco Plug</title>
+        <title>Experiences in Morocco | Mariem Travels</title>
         <meta name="description" content="Browse and book the best experiences, tours, and trips in Morocco. Find your next adventure!" />
-        <meta property="og:title" content="Experiences in Morocco | Morocco Plug" />
+        <meta property="og:title" content="Experiences in Morocco | Mariem Travels" />
         <meta property="og:description" content="Browse and book the best experiences, tours, and trips in Morocco. Find your next adventure!" />
         <meta property="og:image" content="https://safar.moussabfatmi.me/assets/og-image.jpg" />
         <meta property="og:url" content="https://safar.moussabfatmi.me/#/experiences" />

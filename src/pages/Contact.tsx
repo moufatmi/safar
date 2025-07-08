@@ -36,10 +36,10 @@ const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Contact Morocco Plug | Morocco Trips & Tours</title>
-        <meta name="description" content="Contact Morocco Plug for questions about trips, tours, and experiences in Morocco. We're here to help!" />
-        <meta property="og:title" content="Contact Morocco Plug | Morocco Trips & Tours" />
-        <meta property="og:description" content="Contact Morocco Plug for questions about trips, tours, and experiences in Morocco. We're here to help!" />
+        <title>Contact Mariem Travels | Morocco Trips & Tours</title>
+        <meta name="description" content="Contact Mariem Travels for questions about trips, tours, and experiences in Morocco. We're here to help!" />
+        <meta property="og:title" content="Contact Mariem Travels | Morocco Trips & Tours" />
+        <meta property="og:description" content="Contact Mariem Travels for questions about trips, tours, and experiences in Morocco. We're here to help!" />
         <meta property="og:image" content="https://safar.moussabfatmi.me/assets/og-image.jpg" />
         <meta property="og:url" content="https://safar.moussabfatmi.me/#/contact" />
         <link rel="canonical" href="https://safar.moussabfatmi.me/#/contact" />

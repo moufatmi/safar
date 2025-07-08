@@ -35,10 +35,10 @@ const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Morocco Plug | Best Trips & Tours in Morocco</title>
-        <meta name="description" content="Discover authentic trips, tours, and experiences in Morocco. Book your next adventure with Morocco Plug!" />
-        <meta property="og:title" content="Morocco Plug | Best Trips & Tours in Morocco" />
-        <meta property="og:description" content="Discover authentic trips, tours, and experiences in Morocco. Book your next adventure with Morocco Plug!" />
+        <title>Mariem Travels | Best Trips & Tours in Morocco</title>
+        <meta name="description" content="Discover authentic trips, tours, and experiences in Morocco. Book your next adventure with Mariem Travels!" />
+        <meta property="og:title" content="Mariem Travels | Best Trips & Tours in Morocco" />
+        <meta property="og:description" content="Discover authentic trips, tours, and experiences in Morocco. Book your next adventure with Mariem Travels!" />
         <meta property="og:image" content="https://safar.moussabfatmi.me/assets/og-image.jpg" />
         <meta property="og:url" content="https://safar.moussabfatmi.me/" />
         <link rel="canonical" href="https://safar.moussabfatmi.me/" />
@@ -47,7 +47,7 @@ const Home: React.FC = () => {
             {
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Morocco Plug",
+              "name": "Mariem Travels",
               "url": "https://safar.moussabfatmi.me",
               "logo": "https://safar.moussabfatmi.me/assets/og-image.jpg",
               "contactPoint": {

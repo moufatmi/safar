@@ -45,9 +45,9 @@ const SuggestExperience: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Suggest an Experience | Morocco Plug</title>
+        <title>Suggest an Experience | Mariem Travels</title>
         <meta name="description" content="Suggest a new trip or experience in Morocco. Help us expand our collection of authentic Moroccan adventures!" />
-        <meta property="og:title" content="Suggest an Experience | Morocco Plug" />
+        <meta property="og:title" content="Suggest an Experience | Mariem Travels" />
         <meta property="og:description" content="Suggest a new trip or experience in Morocco. Help us expand our collection of authentic Moroccan adventures!" />
         <meta property="og:image" content="https://safar.moussabfatmi.me/assets/og-image.jpg" />
         <meta property="og:url" content="https://safar.moussabfatmi.me/#/suggest" />

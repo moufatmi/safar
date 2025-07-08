@@ -48,7 +48,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
         </div>
         <div className="flex space-x-3">
           <Link 
-            to={`/experience/${experience.id}`}
+            to={`/experience/${experience.slug}`}
             className="flex-1 bg-gray-100 text-gray-700 text-center py-2 rounded-lg hover:bg-gray-200 transition-colors font-medium"
           >
             Details

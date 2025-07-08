@@ -33,6 +33,7 @@ export interface Translation {
 
 export type SupabaseExperience = {
   id: string;
+  slug: string;
   title: string;
   description: string;
   price: number;

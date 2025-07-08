@@ -4,8 +4,10 @@ import { SupabaseExperience } from '../types';
 import { Plus, Trash2, Edit, Loader2, LogOut } from 'lucide-react';
 import { Auth } from '@supabase/auth-ui-react';
 import { ThemeSupa } from '@supabase/auth-ui-shared';
+import { slugify } from '../utils/slugify';
 
 const initialForm: Omit<SupabaseExperience, 'id'> = {
+  slug: '',
   title: '',
   description: '',
   price: 0,
@@ -63,10 +65,16 @@ const FatmiAdmin: React.FC = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type, checked } = e.target;
-    setForm(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value,
-    }));
+    setForm(prev => {
+      let updated = {
+        ...prev,
+        [name]: type === 'checkbox' ? checked : value,
+      };
+      if (name === 'title') {
+        updated.slug = slugify(value);
+      }
+      return updated;
+    });
   };
 
   const handleGalleryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -144,6 +152,7 @@ const FatmiAdmin: React.FC = () => {
         <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-md p-6 mb-8 grid gap-4 grid-cols-1 md:grid-cols-2">
           <div className="col-span-1 md:col-span-2 text-lg font-semibold mb-2">{editingId ? 'Edit Experience' : 'Add New Experience'}</div>
           <input name="title" value={form.title} onChange={handleChange} placeholder="Title" className="border p-2 rounded" required />
+          <input name="slug" value={form.slug} readOnly className="border p-2 rounded bg-gray-100" placeholder="Slug (auto)" />
           <input name="location" value={form.location} onChange={handleChange} placeholder="Location" className="border p-2 rounded" required />
           <input name="duration" value={form.duration} onChange={handleChange} placeholder="Duration" className="border p-2 rounded" required />
           <input name="price" value={form.price} onChange={handleChange} placeholder="Price" type="number" className="border p-2 rounded" required />

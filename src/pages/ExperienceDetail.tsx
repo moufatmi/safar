@@ -6,7 +6,7 @@ import { SupabaseExperience } from '../types';
 import { Helmet } from 'react-helmet-async';
 
 const ExperienceDetail: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
+  const { slug } = useParams<{ slug: string }>();
   const [experience, setExperience] = useState<SupabaseExperience | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -18,7 +18,7 @@ const ExperienceDetail: React.FC = () => {
       const { data, error } = await supabase
         .from('experiences')
         .select('*')
-        .eq('id', id)
+        .eq('slug', slug)
         .single();
       if (error || !data) {
         setError('Experience not found.');
@@ -29,7 +29,7 @@ const ExperienceDetail: React.FC = () => {
       setLoading(false);
     };
     fetchExperience();
-  }, [id]);
+  }, [slug]);
 
   const handleWhatsAppClick = () => {
     if (!experience) return;
@@ -68,8 +68,8 @@ const ExperienceDetail: React.FC = () => {
         <meta property="og:title" content={experience ? `${experience.title} | Mariem Travels` : 'Experience Details | Mariem Travels'} />
         <meta property="og:description" content={experience ? experience.description : 'Discover this experience in Morocco with Mariem Travels.'} />
         <meta property="og:image" content={experience ? experience.image : 'https://safar.moussabfatmi.me/assets/og-image.jpg'} />
-        <meta property="og:url" content={`https://safar.moussabfatmi.me/#/experience/${id}`} />
-        <link rel="canonical" href={`https://safar.moussabfatmi.me/#/experience/${id}`} />
+        <meta property="og:url" content={`https://safar.moussabfatmi.me/#/experience/${slug}`} />
+        <link rel="canonical" href={`https://safar.moussabfatmi.me/#/experience/${slug}`} />
         {experience && (
           <script type="application/ld+json">
             {JSON.stringify({
@@ -83,7 +83,7 @@ const ExperienceDetail: React.FC = () => {
                 "@type": "Offer",
                 "price": experience.price,
                 "priceCurrency": "MAD",
-                "url": `https://safar.moussabfatmi.me/#/experience/${id}`
+                "url": `https://safar.moussabfatmi.me/#/experience/${slug}`
               },
               "provider": {
                 "@type": "Organization",

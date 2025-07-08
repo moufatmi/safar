@@ -5,6 +5,7 @@ import ExperienceCard from '../components/ExperienceCard';
 import WhySection from '../components/WhySection';
 import { supabase } from '../supabaseClient';
 import { SupabaseExperience } from '../types';
+import { Helmet } from 'react-helmet-async';
 
 const Home: React.FC = () => {
   const [featuredExperiences, setFeaturedExperiences] = useState<SupabaseExperience[]>([]);
@@ -33,6 +34,15 @@ const Home: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Morocco Plug | Best Trips & Tours in Morocco</title>
+        <meta name="description" content="Discover authentic trips, tours, and experiences in Morocco. Book your next adventure with Morocco Plug!" />
+        <meta property="og:title" content="Morocco Plug | Best Trips & Tours in Morocco" />
+        <meta property="og:description" content="Discover authentic trips, tours, and experiences in Morocco. Book your next adventure with Morocco Plug!" />
+        <meta property="og:image" content="https://safar.moussabfatmi.me/assets/og-image.jpg" />
+        <meta property="og:url" content="https://safar.moussabfatmi.me/" />
+        <link rel="canonical" href="https://safar.moussabfatmi.me/" />
+      </Helmet>
       <Hero />
       
       {/* Featured Experiences */}
@@ -45,6 +55,11 @@ const Home: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Discover our handpicked, most popular experiences!
             </p>
+            <div className="mt-8 text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              <p>
+                Welcome to Morocco Plug, your gateway to the best trips in Morocco! Whether you're seeking unforgettable Morocco tours, unique desert adventures, or authentic Moroccan experiences, we connect you with the top travel opportunities across the country. Explore the magic of Morocco with our curated selection of tours, excursions, and cultural journeys. Book your next Morocco travel adventure with confidence and discover why so many travelers trust us for their Moroccan experience.
+              </p>
+            </div>
           </div>
           {loading ? (
             <div className="text-center py-12">

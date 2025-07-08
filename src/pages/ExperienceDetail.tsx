@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, MapPin, Clock, DollarSign, MessageCircle, Star } from 'lucide-react';
 import { supabase } from '../supabaseClient';
 import { SupabaseExperience } from '../types';
+import { Helmet } from 'react-helmet-async';
 
 const ExperienceDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -61,6 +62,15 @@ const ExperienceDetail: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>{experience ? `${experience.title} | Morocco Plug` : 'Experience Details | Morocco Plug'}</title>
+        <meta name="description" content={experience ? experience.description : 'Discover this experience in Morocco with Morocco Plug.'} />
+        <meta property="og:title" content={experience ? `${experience.title} | Morocco Plug` : 'Experience Details | Morocco Plug'} />
+        <meta property="og:description" content={experience ? experience.description : 'Discover this experience in Morocco with Morocco Plug.'} />
+        <meta property="og:image" content={experience ? experience.image : 'https://safar.moussabfatmi.me/assets/og-image.jpg'} />
+        <meta property="og:url" content={`https://safar.moussabfatmi.me/#/experience/${id}`} />
+        <link rel="canonical" href={`https://safar.moussabfatmi.me/#/experience/${id}`} />
+      </Helmet>
       <div className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link

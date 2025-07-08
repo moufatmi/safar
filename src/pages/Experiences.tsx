@@ -3,6 +3,7 @@ import { Search, Filter } from 'lucide-react';
 import ExperienceCard from '../components/ExperienceCard';
 import { supabase } from '../supabaseClient';
 import { SupabaseExperience } from '../types';
+import { Helmet } from 'react-helmet-async';
 
 const Experiences: React.FC = () => {
   const [experiences, setExperiences] = useState<SupabaseExperience[]>([]);
@@ -49,6 +50,15 @@ const Experiences: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Experiences in Morocco | Morocco Plug</title>
+        <meta name="description" content="Browse and book the best experiences, tours, and trips in Morocco. Find your next adventure!" />
+        <meta property="og:title" content="Experiences in Morocco | Morocco Plug" />
+        <meta property="og:description" content="Browse and book the best experiences, tours, and trips in Morocco. Find your next adventure!" />
+        <meta property="og:image" content="https://safar.moussabfatmi.me/assets/og-image.jpg" />
+        <meta property="og:url" content="https://safar.moussabfatmi.me/#/experiences" />
+        <link rel="canonical" href="https://safar.moussabfatmi.me/#/experiences" />
+      </Helmet>
       <div className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">

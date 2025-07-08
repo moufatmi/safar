@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { PlusCircle, Upload, MapPin, DollarSign } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const SuggestExperience: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -43,6 +44,15 @@ const SuggestExperience: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Suggest an Experience | Morocco Plug</title>
+        <meta name="description" content="Suggest a new trip or experience in Morocco. Help us expand our collection of authentic Moroccan adventures!" />
+        <meta property="og:title" content="Suggest an Experience | Morocco Plug" />
+        <meta property="og:description" content="Suggest a new trip or experience in Morocco. Help us expand our collection of authentic Moroccan adventures!" />
+        <meta property="og:image" content="https://safar.moussabfatmi.me/assets/og-image.jpg" />
+        <meta property="og:url" content="https://safar.moussabfatmi.me/#/suggest" />
+        <link rel="canonical" href="https://safar.moussabfatmi.me/#/suggest" />
+      </Helmet>
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

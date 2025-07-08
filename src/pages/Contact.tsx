@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageCircle, Mail, MapPin, Phone } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const Contact: React.FC = () => {
   const contactMethods = [
@@ -34,6 +35,16 @@ const Contact: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Contact Morocco Plug | Morocco Trips & Tours</title>
+        <meta name="description" content="Contact Morocco Plug for questions about trips, tours, and experiences in Morocco. We're here to help!" />
+        <meta property="og:title" content="Contact Morocco Plug | Morocco Trips & Tours" />
+        <meta property="og:description" content="Contact Morocco Plug for questions about trips, tours, and experiences in Morocco. We're here to help!" />
+        <meta property="og:image" content="https://safar.moussabfatmi.me/assets/og-image.jpg" />
+        <meta property="og:url" content="https://safar.moussabfatmi.me/#/contact" />
+        <link rel="canonical" href="https://safar.moussabfatmi.me/#/contact" />
+      </Helmet>
+
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

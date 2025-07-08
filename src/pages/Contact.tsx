@@ -14,8 +14,8 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: { en: 'Email' },
-      value: 'info@moroccoplug.com',
-      link: 'mailto:info@moroccoplug.com',
+      value: 'info@.commoussabfatmi.me',
+      link: 'mailto:info@.commoussabfatmi.me',
       description: { en: 'For detailed inquiries' }
     },
     {

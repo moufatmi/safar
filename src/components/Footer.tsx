@@ -50,9 +50,9 @@ const Footer: React.FC = () => {
                 <MessageCircle className="w-5 h-5" />
                 <span>+212 600 000 000</span>
               </a>
-              <a href="mailto:info@moroccoplug.com" className="flex items-center space-x-2 text-gray-400 hover:text-orange-500 transition-colors">
+              <a href="mailto:info@.commoussabfatmi.me" className="flex items-center space-x-2 text-gray-400 hover:text-orange-500 transition-colors">
                 <Mail className="w-5 h-5" />
-                <span>info@moroccoplug.com</span>
+                <span>info@moussabfatmi.me</span>
               </a>
             </div>
           </div>

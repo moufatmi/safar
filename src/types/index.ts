@@ -44,4 +44,6 @@ export type SupabaseExperience = {
   featured: boolean;
   pdfUrl?: string;
   region?: string;
+  rating?: number;
+  rating_count?: number;
 };

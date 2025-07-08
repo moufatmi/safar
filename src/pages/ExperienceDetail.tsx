@@ -100,7 +100,9 @@ const ExperienceDetail: React.FC = () => {
               </h1>
               <div className="flex items-center space-x-1">
                 <Star className="w-5 h-5 fill-current text-yellow-400" />
-                <span className="text-sm text-gray-600">4.8 (124)</span>
+                <span className="text-sm text-gray-600">
+                  {experience.rating ?? 4.8} ({experience.rating_count ?? 124})
+                </span>
               </div>
             </div>
             <p className="text-gray-600 mb-6 text-lg leading-relaxed">
@@ -127,10 +129,9 @@ const ExperienceDetail: React.FC = () => {
                 <div>
                   <p className="text-sm text-gray-600">Price</p>
                   <p className="text-2xl font-bold text-orange-600">
-                    {experience.price} MAD
+                    {experience.price} <span className="font-bold text-orange-600">MAD</span>
                   </p>
                 </div>
-                <DollarSign className="w-8 h-8 text-orange-600" />
               </div>
             </div>
             {/* Booking and PDF Buttons */}

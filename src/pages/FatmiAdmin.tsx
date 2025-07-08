@@ -17,6 +17,8 @@ const initialForm: Omit<SupabaseExperience, 'id'> = {
   featured: false,
   pdfUrl: '',
   region: '',
+  rating: 4.8,
+  rating_count: 124,
 };
 
 const FatmiAdmin: React.FC = () => {
@@ -150,6 +152,8 @@ const FatmiAdmin: React.FC = () => {
           <input name="whatsapp" value={form.whatsapp} onChange={handleChange} placeholder="WhatsApp" className="border p-2 rounded" />
           <input name="pdfUrl" value={form.pdfUrl || ''} onChange={handleChange} placeholder="PDF URL (optional)" className="border p-2 rounded" />
           <input name="region" value={form.region || ''} onChange={handleChange} placeholder="Region (optional)" className="border p-2 rounded" />
+          <input name="rating" value={form.rating ?? ''} onChange={handleChange} placeholder="Rating (e.g. 4.8)" type="number" step="0.1" min="0" max="5" className="border p-2 rounded" />
+          <input name="rating_count" value={form.rating_count ?? ''} onChange={handleChange} placeholder="Rating Count (e.g. 124)" type="number" min="0" className="border p-2 rounded" />
           <label className="flex items-center space-x-2">
             <input name="featured" type="checkbox" checked={form.featured} onChange={handleChange} />
             <span>Featured</span>

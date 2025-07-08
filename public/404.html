@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=/" />
-    <script>
-      // For client-side routing: redirect to root and let React Router handle it
-      window.location.replace(
-        "/" + window.location.search + window.location.hash
-      );
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // If the current path is not the root, redirect to the root with the path as a hash
+      var l = window.location;
+      var hash = l.pathname + l.search + l.hash;
+      if (hash !== '/' && hash !== '/index.html') {
+        window.location.replace('/#' + hash);
+      }
     </script>
   </head>
-  <body></body>
-</html> 
+  <body>
+    <h1>Redirecting...</h1>
+  </body>
+</html>

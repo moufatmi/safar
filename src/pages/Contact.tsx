@@ -39,10 +39,10 @@ const Contact: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              {t('contactTitle')}
+              Contact Us
             </h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
-              {t('contactSubtitle')}
+              We're here to help you with any questions or concerns you might have.
             </p>
           </div>
         </div>
@@ -86,13 +86,10 @@ const Contact: React.FC = () => {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              {currentLanguage.code === 'ar' ? 'أرسل لنا رسالة' : 'Send us a message'}
+              Send us a message
             </h2>
             <p className="text-xl text-gray-600">
-              {currentLanguage.code === 'ar' 
-                ? 'سنرد عليك في أقرب وقت ممكن'
-                : 'We\'ll get back to you as soon as possible'
-              }
+              We'll get back to you as soon as possible
             </p>
           </div>
 
@@ -100,7 +97,7 @@ const Contact: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  {t('name')}
+                  Name
                 </label>
                 <input
                   type="text"
@@ -112,7 +109,7 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  {t('email')}
+                  Email
                 </label>
                 <input
                   type="email"
@@ -126,7 +123,7 @@ const Contact: React.FC = () => {
 
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                {t('phone')}
+                Phone
               </label>
               <input
                 type="tel"
@@ -138,7 +135,7 @@ const Contact: React.FC = () => {
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                {t('message')}
+                Message
               </label>
               <textarea
                 id="message"
@@ -154,7 +151,7 @@ const Contact: React.FC = () => {
                 type="submit"
                 className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl"
               >
-                {t('submit')}
+                Submit
               </button>
             </div>
           </form>
@@ -165,13 +162,10 @@ const Contact: React.FC = () => {
       <div className="py-16 bg-gradient-to-r from-orange-500 to-red-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {currentLanguage.code === 'ar' ? 'تحتاج مساعدة فورية؟' : 'Need immediate help?'}
+            Need immediate help?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            {currentLanguage.code === 'ar' 
-              ? 'تواصل معنا مباشرة عبر واتساب'
-              : 'Contact us directly via WhatsApp'
-            }
+            Contact us directly via WhatsApp
           </p>
           <a
             href="https://wa.me/212600000000"
@@ -181,7 +175,7 @@ const Contact: React.FC = () => {
           >
             <MessageCircle className="w-6 h-6" />
             <span>
-              {currentLanguage.code === 'ar' ? 'فتح واتساب' : 'Open WhatsApp'}
+              Open WhatsApp
             </span>
           </a>
         </div>

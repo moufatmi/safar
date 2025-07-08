@@ -49,10 +49,10 @@ const SuggestExperience: React.FC = () => {
           <div className="text-center">
             <PlusCircle className="w-16 h-16 mx-auto mb-6 opacity-90" />
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              {t('suggestTitle')}
+              Suggest Title
             </h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
-              {t('suggestSubtitle')}
+              Suggest Subtitle
             </p>
           </div>
         </div>
@@ -66,12 +66,12 @@ const SuggestExperience: React.FC = () => {
               {/* Personal Information */}
               <div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">
-                  {t('name')} *
+                  Name *
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="guideName" className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('name')} *
+                      Name *
                     </label>
                     <input
                       type="text"
@@ -85,7 +85,7 @@ const SuggestExperience: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('email')} *
+                      Email *
                     </label>
                     <input
                       type="email"
@@ -99,7 +99,7 @@ const SuggestExperience: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('phone')} *
+                      Phone *
                     </label>
                     <input
                       type="tel"
@@ -113,7 +113,7 @@ const SuggestExperience: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="whatsapp" className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('whatsapp')} *
+                      Whatsapp *
                     </label>
                     <input
                       type="tel"
@@ -131,12 +131,12 @@ const SuggestExperience: React.FC = () => {
               {/* Experience Details */}
               <div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">
-                  {t('experienceDetails')}
+                  Experience Details
                 </h2>
                 <div className="space-y-6">
                   <div>
                     <label htmlFor="experienceTitle" className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('experienceTitle')} *
+                      Experience Title *
                     </label>
                     <input
                       type="text"
@@ -151,7 +151,7 @@ const SuggestExperience: React.FC = () => {
 
                   <div>
                     <label htmlFor="experienceDescription" className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('experienceDescription')} *
+                      Experience Description *
                     </label>
                     <textarea
                       id="experienceDescription"
@@ -161,7 +161,7 @@ const SuggestExperience: React.FC = () => {
                       rows={6}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                      placeholder={t('experienceDescriptionPlaceholder')}
+                      placeholder="Experience Description Placeholder"
                     ></textarea>
                   </div>
 
@@ -169,7 +169,7 @@ const SuggestExperience: React.FC = () => {
                     <div>
                       <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-2">
                         <MapPin className="w-4 h-4 inline mr-1" />
-                        {t('location')} *
+                        Location *
                       </label>
                       <input
                         type="text"
@@ -183,7 +183,7 @@ const SuggestExperience: React.FC = () => {
                     </div>
                     <div>
                       <label htmlFor="duration" className="block text-sm font-medium text-gray-700 mb-2">
-                        {t('duration')} *
+                        Duration *
                       </label>
                       <input
                         type="text"
@@ -192,7 +192,7 @@ const SuggestExperience: React.FC = () => {
                         value={formData.duration}
                         onChange={handleInputChange}
                         required
-                        placeholder={t('durationPlaceholder')}
+                        placeholder="Duration Placeholder"
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       />
                     </div>
@@ -202,7 +202,7 @@ const SuggestExperience: React.FC = () => {
                     <div>
                       <label htmlFor="price" className="block text-sm font-medium text-gray-700 mb-2">
                         <DollarSign className="w-4 h-4 inline mr-1" />
-                        {t('price')} *
+                        Price *
                       </label>
                       <input
                         type="number"
@@ -217,7 +217,7 @@ const SuggestExperience: React.FC = () => {
                     </div>
                     <div>
                       <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-2">
-                        {t('category')} *
+                        Category *
                       </label>
                       <select
                         id="category"
@@ -227,7 +227,7 @@ const SuggestExperience: React.FC = () => {
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       >
-                        <option value="">{t('selectCategory')}</option>
+                        <option value="">Select Category</option>
                         {categories.map(category => (
                           <option key={category.id} value={category.id}>
                             {category.label}
@@ -242,15 +242,15 @@ const SuggestExperience: React.FC = () => {
               {/* Photos Section */}
               <div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">
-                  {t('photos')}
+                  Photos
                 </h2>
                 <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
                   <Upload className="w-12 h-12 mx-auto mb-4 text-gray-400" />
                   <p className="text-gray-600 mb-2">
-                    {t('dragDropPhotos')}
+                    Drag and drop photos here
                   </p>
                   <p className="text-sm text-gray-500">
-                    {t('recommendedPhotos')}
+                    Recommended Photos
                   </p>
                 </div>
               </div>
@@ -261,10 +261,10 @@ const SuggestExperience: React.FC = () => {
                   type="submit"
                   className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-12 py-4 rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl"
                 >
-                  {t('submit')}
+                  Submit
                 </button>
                 <p className="text-sm text-gray-500 mt-4">
-                  {t('contactWithin')}
+                  Contact Within
                 </p>
               </div>
             </form>

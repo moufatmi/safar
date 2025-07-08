@@ -11,7 +11,7 @@ const Hero = () => {
             Discover Authentic Morocco
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-xl">
-            Unique experiences, local guides, and unforgettable adventures. Book your next journey with Morocco Plug.
+            Unique experiences, local guides, and unforgettable adventures. Book your next journey with Mariem Travels.
           </p>
           <Link
             to="/experiences"

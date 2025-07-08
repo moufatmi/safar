@@ -25,7 +25,7 @@ const Header: React.FC = () => {
             <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">M</span>
             </div>
-            <span className="text-xl font-bold text-gray-800">Morocco Plug</span>
+            <span className="text-xl font-bold text-gray-800">Mariem Travels</span>
           </Link>
 
           {/* Desktop Navigation */}

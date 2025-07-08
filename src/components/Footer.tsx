@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
               <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">M</span>
               </div>
-              <span className="text-xl font-bold">Morocco Plug</span>
+              <span className="text-xl font-bold">Mariem Travels</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               {/* Placeholder for the removed language switcher */}
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Morocco Plug. All rights reserved</p>
+          <p>&copy; 2024 Mariem Travels. All rights reserved</p>
         </div>
       </div>
     </footer>

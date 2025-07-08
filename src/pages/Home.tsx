@@ -79,7 +79,7 @@ const Home: React.FC = () => {
             </p>
             <div className="mt-8 text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
               <p>
-                Welcome to Morocco Plug, your gateway to the best trips in Morocco! Whether you're seeking unforgettable Morocco tours, unique desert adventures, or authentic Moroccan experiences, we connect you with the top travel opportunities across the country. Explore the magic of Morocco with our curated selection of tours, excursions, and cultural journeys. Book your next Morocco travel adventure with confidence and discover why so many travelers trust us for their Moroccan experience.
+                Welcome to Mariem Travels, your gateway to the best trips in Morocco! Whether you're seeking unforgettable Morocco tours, unique desert adventures, or authentic Moroccan experiences, we connect you with the top travel opportunities across the country. Explore the magic of Morocco with our curated selection of tours, excursions, and cultural journeys. Book your next Morocco travel adventure with confidence and discover why so many travelers trust us for their Moroccan experience.
               </p>
             </div>
           </div>

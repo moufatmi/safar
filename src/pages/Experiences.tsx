@@ -103,7 +103,7 @@ const Experiences: React.FC = () => {
         ) : error ? (
           <div className="text-center py-12">
             <p className="text-red-500 text-lg">{error}</p>
-          </div>
+        </div>
         ) : filteredExperiences.length === 0 ? (
           <div className="text-center py-12">
             <p className="text-gray-500 text-lg">No experiences found.</p>

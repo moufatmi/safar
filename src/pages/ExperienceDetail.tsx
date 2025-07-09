@@ -173,13 +173,13 @@ const ExperienceDetail: React.FC = () => {
             </div>
             {/* Booking and PDF Buttons */}
             <div className="flex flex-col md:flex-row gap-4 mt-4">
-              <button
-                onClick={handleWhatsAppClick}
+            <button
+              onClick={handleWhatsAppClick}
                 className="flex-1 bg-gradient-to-r from-orange-500 to-red-600 text-white py-4 rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 font-semibold text-lg flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
-              >
-                <MessageCircle className="w-6 h-6" />
+            >
+              <MessageCircle className="w-6 h-6" />
                 <span>Book via WhatsApp</span>
-              </button>
+            </button>
               <a
                 href={experience.pdfUrl || undefined}
                 target="_blank"

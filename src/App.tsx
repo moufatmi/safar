@@ -24,7 +24,6 @@ function App() {
               <Route path="/experience/:slug" element={<ExperienceDetail />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/suggest" element={<SuggestExperience />} />
               <Route path="/fatmi" element={<FatmiAdmin />} />
             </Routes>
           </main>

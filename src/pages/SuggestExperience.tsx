@@ -1,3 +1,5 @@
+// The SuggestExperience page is currently disabled. If you want to re-enable it, uncomment the code above.
+
 import React, { useState } from 'react';
 import { PlusCircle, Upload, MapPin, DollarSign } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';

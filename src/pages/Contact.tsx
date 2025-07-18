@@ -7,28 +7,28 @@ const Contact: React.FC = () => {
     {
       icon: MessageCircle,
       title: { en: 'WhatsApp' },
-      value: '+212 600 000 000',
+      value: '+212 6 98 57 02 82',
       link: 'https://wa.me/212698570282',
       description: { en: 'Fastest way to reach us' }
     },
     {
       icon: Mail,
       title: { en: 'Email' },
-      value: 'info@.commoussabfatmi.me',
-      link: 'mailto:info@.commoussabfatmi.me',
+      value: 'contact@moussabfatmi.me',
+      link: 'mailto:contact@moussabfatmi.me',
       description: { en: 'For detailed inquiries' }
     },
     {
       icon: MapPin,
       title: { en: 'Location' },
-      value: 'Marrakech, Morocco',
+      value: 'Oujda, Morocco',
       description: { en: 'Our main headquarters' }
     },
     {
       icon: Phone,
       title: { en: 'Phone' },
-      value: '+212 524 000 000',
-      link: 'tel:+212524000000',
+      value: '+212 6 98 57 02 82',
+      link: 'tel:+212698570282',
       description: { en: 'For urgent calls' }
     }
   ];

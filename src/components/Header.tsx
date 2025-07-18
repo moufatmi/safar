@@ -11,7 +11,7 @@ const Header: React.FC = () => {
     { key: 'experiences', path: '/experiences' },
     { key: 'about', path: '/about' },
     { key: 'contact', path: '/contact' },
-    { key: 'suggest', path: '/suggest' }
+    // { key: 'suggest', path: '/suggest' }
   ];
 
   const isActive = (path: string) => location.pathname === path;

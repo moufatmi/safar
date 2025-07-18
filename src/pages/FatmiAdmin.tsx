@@ -23,6 +23,8 @@ const initialForm: Omit<SupabaseExperience, 'id'> = {
   rating_count: 124,
 };
 
+const LICENSE_CODE = '6feacceb6fd253547afd8dde6ba846a9';
+
 const FatmiAdmin: React.FC = () => {
   const [experiences, setExperiences] = useState<SupabaseExperience[]>([]);
   const [loading, setLoading] = useState(true);
@@ -31,6 +33,9 @@ const FatmiAdmin: React.FC = () => {
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [user, setUser] = useState(null);
+  const [licenseInput, setLicenseInput] = useState('');
+  const [codeEntered, setCodeEntered] = useState(false);
+  const [licenseError, setLicenseError] = useState('');
 
   useEffect(() => {
     const { data: authListener } = supabase.auth.onAuthStateChange((_event, session) => {
@@ -122,6 +127,36 @@ const FatmiAdmin: React.FC = () => {
     await supabase.auth.signOut();
     setUser(null);
   };
+
+  if (!codeEntered) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <form
+          onSubmit={e => {
+            e.preventDefault();
+            if (licenseInput.trim() === LICENSE_CODE) {
+              setCodeEntered(true);
+              setLicenseError('');
+            } else {
+              setLicenseError('Incorrect code. Please try again.');
+            }
+          }}
+          className="max-w-md w-full bg-white rounded-lg shadow-lg p-8"
+        >
+          <h1 className="text-2xl font-bold mb-6 text-center">Enter ترخيص Code</h1>
+          <input
+            type="text"
+            value={licenseInput}
+            onChange={e => setLicenseInput(e.target.value)}
+            placeholder="Enter your ترخيص code"
+            className="w-full border p-3 rounded mb-4"
+          />
+          {licenseError && <div className="text-red-600 mb-4 text-center">{licenseError}</div>}
+          <button type="submit" className="w-full bg-orange-600 text-white py-3 rounded font-semibold">Access Admin</button>
+        </form>
+      </div>
+    );
+  }
 
   if (!user) {
     return (
